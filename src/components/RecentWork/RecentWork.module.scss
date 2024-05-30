@@ -1,0 +1,139 @@
+@import "../../styles/constants.scss";
+
+.recentWork {
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  margin-top: 4.5rem;
+  padding-bottom: 5rem;
+  background-color: transparent;
+  background: transparent;
+
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+
+    .line {
+      width: 172px;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      line-height: 28px;
+    }
+  }
+
+  .heading {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      p {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 0px;
+
+        &:nth-child(2) {
+          color: $primary;
+        }
+      }
+    }
+
+    .right {
+      button {
+        width: 160px;
+        height: 44px;
+        @include flexCenter;
+        background-color: #fff;
+        color: #000;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        gap: 12px;
+        border-radius: 10px;
+        margin-top: 22px;
+      }
+    }
+  }
+
+  .projects {
+    margin-top: 5rem;
+
+    // .carouselDots{
+    //   bottom: -5%;
+    // }
+
+    .carouselItem {
+      border: 1px solid #a1aebf;
+      border-radius: 4px;
+      // height: 507px;
+      padding: 30px 30px;
+      // margin-left: 2rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      height: 430px;
+
+      // &:first-child{
+      //   margin-left: -10px;
+      // }
+
+      .image {
+        height: 392px;
+        height: 290px;
+        margin: auto;
+        overflow: hidden;
+
+        img {
+          border-radius: 16px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          user-select: none;
+          pointer-events: none;
+        }
+      }
+
+      .title {
+        margin-left: 10px;
+        margin-top: 20px;
+        p {
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 0px;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 24px;
+          color: rgba($color: #000000, $alpha: 0.8);
+        }
+      }
+    }
+
+    .carouselCenterItem {
+      background-color: #fff;
+      height: auto;
+      height: 488px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 0;
+
+      .title {
+        color: #040404;
+
+        p{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "../../styles/constants.scss";
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css");
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css");
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-share.css");
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  background: $background;
+
+  .shape1 {
+    position: absolute;
+    top: -19%;
+    right: -18%;
+    width: 469px;
+    height: 488px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(300px);
+    z-index: 0;
+  }
+
+  .shape2 {
+    position: absolute;
+    bottom: -40%;
+    left: -7%;
+    width: 360px;
+    height: 364px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(250px);
+    z-index: 0;
+  }
+
+  .content {
+    width: 100%;
+    z-index: 10;
+    color: #fff;
+    margin-top: 3.2rem;
+
+    .title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+    }
+
+    .projectDetail {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 7rem;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &:nth-child(2) {
+          justify-self: end;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          color: $primary;
+        }
+
+        span {
+          color: #fff;
+          font-size: 18px;
+          font-weight: normal;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .problem {
+      display: flex;
+      gap: 6rem;
+      margin-bottom: 13rem;
+
+      &:last-child {
+        margin-bottom: 8.6rem;
+      }
+
+      .left {
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          color: $primary;
+          margin-bottom: 10px;
+        }
+
+        span {
+          color: #ccc;
+          font-size: 16px;
+          font-weight: normal !important;
+          line-height: 28px;
+        }
+      }
+
+      .right {
+        img {
+          transform: scale(1.7);
+        }
+      }
+    }
+  }
+}

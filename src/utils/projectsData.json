@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Ride App",
+    "description": "",
+    "image": "projects/p1.png",
+    "client": "Taxi Driver",
+    "industry": "Pick and Drop",
+    "role": "Design & Development",
+    "problem": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "solution": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "images": ["/projects/p1.png","/projects/p2.png","/projects/p3.png","/projects/p4.png","/projects/p5.png","/projects/p6.png"]
+  },
+  {
+    "id": 2,
+    "title": "Flonest Ride App",
+    "description": "We make awesome websites that help you reach more people, sell more products. Our websites are designed to make sure you\n                  succeed.",
+    "image": "projects/p2.png",
+    "client": "Taxi Driver",
+    "industry": "Pick and Drop",
+    "role": "Design & Development",
+    "problem": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "solution": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "images": ["/projects/p1.png","/projects/p2.png","/projects/p3.png","/projects/p4.png","/projects/p5.png","/projects/p6.png"]
+  },
+  {
+    "id": 3,
+    "title": "Real Estate App",
+    "description": "",
+    "image": "projects/p3.png",
+    "client": "Taxi Driver",
+    "industry": "Pick and Drop",
+    "role": "Design & Development",
+    "problem": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "solution": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "images": ["/projects/p1.png","/projects/p2.png","/projects/p3.png","/projects/p4.png","/projects/p5.png","/projects/p6.png"]
+  },
+  {
+    "id": 4,
+    "title": "Agency Wbsite",
+    "description": " We make awesome websites that help you reach more people, sell\n                  more products. Our websites are designed to make sure you\n                  succeed.",
+    "image": "projects/p4.png",
+    "client": "Taxi Driver",
+    "industry": "Pick and Drop",
+    "role": "Design & Development",
+    "problem": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "solution": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "images": ["/projects/p1.png","/projects/p2.png","/projects/p3.png","/projects/p4.png","/projects/p5.png","/projects/p6.png"]
+  },
+  {
+    "id": 5,
+    "title": "Folio Site",
+    "description": "",
+    "image": "projects/p5.png",
+    "client": "Taxi Driver",
+    "industry": "Pick and Drop",
+    "role": "Design & Development",
+    "problem": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "solution": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "images": ["/projects/p1.png","/projects/p2.png","/projects/p3.png","/projects/p4.png","/projects/p5.png","/projects/p6.png"]
+  },
+  {
+    "id": 6,
+    "title": "Remote Montioring tool",
+    "description": " We make awesome websites that help you reach more people, sell\n                  more products. Our websites are designed to make sure you\n                  succeed.",
+    "image": "projects/p6.png",
+    "client": "Taxi Driver",
+    "industry": "Pick and Drop",
+    "role": "Design & Development",
+    "problem": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "solution": "Edgecoin Bank is a digital bank based on the Edgecoin crypto currency. It runs on a transparent blockchain network aims to build the bridge between digital assets and traditional banking services",
+    "images": ["/projects/p1.png","/projects/p2.png","/projects/p3.png","/projects/p4.png","/projects/p5.png","/projects/p6.png"]
+  }
+]

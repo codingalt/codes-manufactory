@@ -1,0 +1,156 @@
+@import "../../styles/constants.scss";
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: $background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .shape1 {
+    position: absolute;
+    top: -19%;
+    right: -18%;
+    width: 469px;
+    height: 488px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(300px);
+    z-index: 0;
+  }
+
+  .shape2 {
+    position: absolute;
+    bottom: -40%;
+    left: -7%;
+    width: 360px;
+    height: 364px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(250px);
+    z-index: 0;
+  }
+
+  .content {
+    width: 100%;
+    z-index: 10;
+    color: #fff;
+    margin-top: 0rem;
+
+    .inner {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+
+      .leftText {
+        p {
+          font-size: 72px;
+          font-weight: 700;
+          margin-bottom: 0rem;
+          line-height: 103px;
+        }
+      }
+
+      .rightText {
+        position: absolute;
+        bottom: 0;
+        right: 2%;
+        top: 55%;
+
+        p {
+          font-size: 72px;
+          font-weight: 700;
+          margin-bottom: 0rem;
+          line-height: 103px;
+        }
+      }
+
+      .arrow {
+        position: absolute;
+        top: 80%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .description {
+      margin-top: 3rem;
+      p {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 28px;
+      }
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3rem;
+
+      button {
+        width: 131px;
+        height: 41px;
+        @include flexCenter;
+        background-color: #fff;
+        color: #000;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      button:nth-child(2) {
+        background-color: transparent;
+        color: #fff;
+        gap: 14px;
+      }
+    }
+  }
+
+  .brands {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3.7rem;
+    z-index: 10;
+    color: #fff;
+    padding-left: 11.4rem;
+
+    .leftSide {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .images {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-left: -10px;
+
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .rightSide {
+        flex: 1;
+      .images {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+  }
+}

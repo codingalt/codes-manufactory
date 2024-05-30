@@ -1,0 +1,65 @@
+@import "../../styles/constants.scss";
+
+.pricing {
+  width: 100%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  .shape1 {
+    position: absolute;
+    top: -11%;
+    right: -13%;
+    width: 412px;
+    height: 412px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(320px);
+    z-index: 0;
+  }
+
+  .content {
+    width: 100%;
+
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+
+      .line {
+        width: 172px;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: normal;
+        text-transform: uppercase;
+        line-height: 28px;
+      }
+    }
+
+    .heading {
+      margin-top: 2rem;
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+          font-size: 40px;
+          font-weight: 600;
+          margin-bottom: 0px;
+          line-height: 55px;
+
+          &:nth-child(2) {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

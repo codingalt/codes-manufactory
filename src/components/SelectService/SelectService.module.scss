@@ -1,0 +1,57 @@
+@import "../../styles/constants.scss";
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  background: $background;
+
+  .shape1 {
+    position: absolute;
+    top: -19%;
+    right: -18%;
+    width: 469px;
+    height: 488px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(300px);
+    z-index: 0;
+  }
+
+  .shape2 {
+    position: absolute;
+    bottom: -40%;
+    left: -7%;
+    width: 360px;
+    height: 364px;
+    background: $primary;
+    opacity: 1;
+    border-radius: 100%;
+    filter: blur(250px);
+    z-index: 0;
+  }
+
+  .content {
+    width: 100%;
+    z-index: 10;
+    color: #fff;
+    margin-top: 3.2rem;
+    z-index: 20;
+
+    .title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 0rem;
+      z-index: 100;
+      color: #fff;
+    }
+
+    .subTitle{
+        color: #ccc;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 28px;
+    }
+
+  }
+}

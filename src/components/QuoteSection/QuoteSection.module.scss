@@ -1,0 +1,110 @@
+@import "../../styles/constants.scss";
+
+.quotesWrapper {
+  width: 100%;
+  background-color: #110f0f;
+  background-image: url("../../assets/boy-with-laptop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+
+  .content {
+    width: 100%;
+    display: flex;
+    color: #fff;
+
+    .left {
+      flex: 1;
+
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+
+        .line {
+          width: 172px;
+          height: 2px;
+          background-color: #fff;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: normal;
+          text-transform: uppercase;
+          line-height: 28px;
+        }
+      }
+
+      .heading {
+        margin-top: 2rem;
+
+        .left {
+          p {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 0px;
+            line-height: 55px;
+
+            &:nth-child(2) {
+              color: $primary;
+            }
+          }
+        }
+
+        .bottom {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 26px;
+          color: #fff;
+          margin-top: 2rem;
+          text-align: justify;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      margin-top: 4.1rem;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        input {
+          height: 52px;
+          background-color: transparent;
+          border: 1px solid #a1aebf;
+          border-radius: 10px;
+          padding-left: 1rem;
+          outline: none;
+        }
+
+        textarea {
+          background-color: transparent;
+          border: 1px solid #a1aebf;
+          border-radius: 10px;
+          padding-left: 1rem;
+          padding-top: 1rem;
+          outline: none;
+        }
+
+        button {
+          width: 179px;
+          height: 44px;
+          @include flexCenter;
+          background-color: transparent;
+          color: $primary;
+          outline: none;
+          border: 1px solid $primary;
+          font-size: 16px;
+          font-weight: 600;
+          gap: 12px;
+          border-radius: 10px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
