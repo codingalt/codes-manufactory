@@ -6,7 +6,7 @@ import Projects from './Projects';
 const RecentWork = () => {
   return (
     <div className={css.recentWork}>
-      <div className="md:pt-16 max-w-screen-xl mx-auto px-4 md:px-8">
+      <div className="md:pt-16 pt-12 max-w-screen-xl mx-auto px-4 md:px-11">
         <div className={css.top}>
           <div className={css.line}></div>
           <p>Recent Work</p>

@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 const QuoteSection = () => {
   return (
     <div className={css.quotesWrapper}>
-      <div className="lg:pt-20 lg:pb-28 2xl:pt-28 2xl:pb-28 max-w-screen-xl mx-auto px-4 md:px-20 2xl:px-8">
+      <div className="md:py-10 lg:py-0 lg:pt-20 lg:pb-28 2xl:pt-28 2xl:pb-28 max-w-screen-xl mx-auto px-4 md:px-20 2xl:px-8">
         <div className={css.content}>
           <div className={css.left}>
             <div className={css.top}>

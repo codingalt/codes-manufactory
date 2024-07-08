@@ -47,4 +47,42 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 2.7rem 0.9rem;
+      padding-bottom: 4.6rem;
+
+      .content {
+        .top {
+          gap: 0.9rem;
+
+          .line {
+            width: 45%;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 26px;
+          }
+        }
+
+        .heading {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2px;
+          margin-top: 1.7rem;
+
+          .left {
+            gap: 0.24rem;
+
+            p {
+              font-size: 27px;
+              line-height: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

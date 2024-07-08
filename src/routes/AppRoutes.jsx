@@ -5,6 +5,7 @@ import IndexPage from "../pages/IndexPage";
 import ViewProjectPage from "../pages/ViewProjectPage";
 import Root from "../pages/Root";
 import SelectServicePage from "../pages/SelectServicePage";
+import NotFound from "../components/NotFound/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -35,4 +36,8 @@ export const router = createBrowserRouter([
       // },
     ],
   },
+  {
+    path: "*",
+    element: <NotFound />
+  }
 ]);

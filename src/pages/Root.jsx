@@ -5,6 +5,7 @@ import Copyright from "../components/Footer/Copyright";
 import { Outlet } from "react-router-dom";
 import ScrollRestore from "../components/ScrollRestore/ScrollRestore";
 import "../styles/global.scss";
+import ScrollComponent from "../components/ScrollComponent/ScrollComponent";
 
 const Root = () => {
   return (

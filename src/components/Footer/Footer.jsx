@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <div className={css.footer}>
       <div className={css.shape1}></div>
-      <div className="lg:pt-10 lg:pb-20 2xl:pt-10 2xl:pb-20 max-w-screen-xl mx-auto px-4 md:px-4">
+      <div className="lg:pt-10 lg:pb-20 2xl:pt-10 2xl:pb-20 max-w-screen-xl mx-auto px-3 md:px-4">
         <footer className="footer bg-transparent mb-0 p-10 bg-base-200 text-base-content">
           <aside>
-            <Logo />
+            <Logo hideMenu={true} />
             <p className="text-white mt-2">
               ACME Industries Ltd.
               <br />

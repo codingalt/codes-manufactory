@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./Hero.module.scss";
 import Header from "../Header/Header";
-import arrow from "../../assets/arrow.png"
+import arrow from "../../assets/arrow.svg"
 import { FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
 import Brands from "./Brands";
 
@@ -20,7 +20,7 @@ const Hero = () => {
 
       {/* Content  */}
       <div className={css.content}>
-        <div className="lg:pt-16 2xl:pt-24 max-w-screen-xl mx-auto px-4 md:px-8">
+        <div className="lg:pt-12 2xl:pt-24 max-w-screen-xl mx-auto px-4 md:px-14">
           <div className={css.inner}>
             <div className={css.leftText}>
               <p>We Design</p>
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
 
           <div className={css.description}>
-            <p className="md: max-w-xl">
+            <p className="md:max-w-md lg:max-w-xl">
               We make awesome websites that help you reach more people, sell
               more products. Our websites are designed to make sure you succeed.
             </p>

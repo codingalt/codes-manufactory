@@ -1,104 +1,92 @@
-import React from "react";
+import React, { useState } from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import { useNavigate } from "react-router-dom";
 import css from "./RecentWork.module.scss";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import {useNavigate} from "react-router-dom"
-import  projectsData  from "../../utils/projectsData.json";
+import projectsData from "../../utils/projectsData.json";
+import { truncateText } from "../../utils/helpers";
+import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const Projects = () => {
   const navigate = useNavigate();
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const responsive = {
+    0: { items: 1 },
+    464: { items: 2 },
+    1024: { items: 2 },
+    1280: { items: 3 },
+  };
+
+  const items = projectsData.map((item, index) => {
+    const isEven = (index + 1) % 2 === 0;
+    return (
+      <div
+        key={item.id}
+        onClick={() => navigate(`/projects/${item.title}/${item.id}`)}
+        className={`${css.carouselItem} ${
+          isEven ? css.carouselCenterItem : ""
+        }`}
+      >
+        <div className={css.image}>
+          <img src={item.image} loading="lazy" alt={item.title} />
+        </div>
+        <div className={css.title}>
+          <p>{item.title}</p>
+          {isEven && (
+            <span>
+              {truncateText(item.description, isSmallDevice ? 40 : 115)}
+            </span>
+          )}
+        </div>
+      </div>
+    );
+  });
+
+  const slidePrev = () => setActiveIndex((prevIndex) => prevIndex - 1);
+  const slideNext = () => setActiveIndex((prevIndex) => prevIndex + 1);
+
+  // Custom arrow components
+  const CustomPrevButton = ({ onClick }) => (
+    <button className={css.customArrow + " " + css.prev} onClick={onClick}>
+      <FaChevronLeft />
+    </button>
+  );
+
+  const CustomNextButton = ({ onClick }) => (
+    <button className={css.customArrow + " " + css.next} onClick={onClick}>
+      <FaChevronRight />
+    </button>
+  );
+
+  const syncActiveIndexForSwipeGestures = (e) => setActiveIndex(e.item);
+
+  const onSlideChanged = (e) => {
+    syncActiveIndexForSwipeGestures(e);
+  };
+
+  const onUpdated = (e) => {};
 
   return (
-    <div className={css.projects}>
-      <Carousel
-        additionalTransfrom={-430}
-        arrows={true}
-        autoPlay={true}
-        autoPlaySpeed={4000}
-        centerMode={true}
-        className="carouselContainer"
-        containerClass="container-with-dots"
-        dotListClass="carouselDots"
-        draggable
-        focusOnSelect={false}
+    <div className={`${css.projects} recentProjects`}>
+      <AliceCarousel
+        mouseTracking
         infinite
-        itemClass="carousel-item-padding-40-px"
-        keyBoardControl={true}
-        minimumTouchDrag={80}
-        pauseOnHover={false}
-        renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        partialVisbile={false}
-        customTransition="all 4s"
-        transitionDuration={2500}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 2,
-            partialVisibilityGutter: -20,
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: 2,
-            partialVisibilityGutter: 30,
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464,
-            },
-            items: 2,
-            partialVisibilityGutter: 30,
-          },
-        }}
-        rewind={true}
-        rewindWithAnimation={true}
-        rtl={false}
-        shouldResetAutoplay={true}
-        showDots={true}
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-      >
-        {projectsData?.map((item, index) => {
-          const isEven = (index + 1) % 2 === 0;
-
-          return isEven ? (
-            <div
-              onClick={() => navigate(`/projects/${item.title}/${item.id}`)}
-              className={`${css.carouselItem} ${css.carouselCenterItem}`}
-            >
-              <div key={index} className={css.image}>
-                <img src={item.image} loading="lazy" alt="" />
-              </div>
-              <div className={css.title}>
-                <p>{item.title}</p>
-                <span>{item.description}</span>
-              </div>
-            </div>
-          ) : (
-            <div
-              onClick={() => navigate(`/projects/${item.title}/${item.id}`)}
-              key={index}
-              className={css.carouselItem}
-            >
-              <div className={css.image}>
-                <img src={item.image} loading="lazy" alt="" />
-              </div>
-              <div className={css.title}>
-                <p>{item.title}</p>
-              </div>
-            </div>
-          );
-        })}
-      </Carousel>
+        autoPlay
+        autoPlayInterval={isSmallDevice ? 3000 : 3000}
+        animationDuration={isSmallDevice ? 2000 : 3000}
+        items={items}
+        activeIndex={activeIndex}
+        responsive={responsive}
+        onSlideChanged={onSlideChanged}
+        onUpdated={onUpdated}
+        disableDotsControls
+        renderPrevButton={() => <CustomPrevButton onClick={slidePrev} />}
+        renderNextButton={() => <CustomNextButton onClick={slideNext} />}
+      />
     </div>
   );
 };

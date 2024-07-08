@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,11 +33,49 @@ body {
 //   overflow: auto !important;
 // }
 
+.recentProjects .alice-carousel__stage-item {
+  vertical-align: middle;
+}
+
+.recentProjects .alice-carousel__prev-btn {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  position: absolute;
+  left: 3%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.recentProjects .alice-carousel__next-btn {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  position: absolute;
+  right: 1%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
 .carouselContainer .react-multi-carousel-track {
   gap: 1.5rem;
 }
 
-.carouselContainer .carouselDots{
+.carouselContainer .carouselDots {
   bottom: -50px;
 }
 
@@ -102,35 +139,35 @@ h6 {
 }
 
 // html.has-scroll-smooth {
-//   overflow: hidden; 
+//   overflow: hidden;
 // }
 
 // html.has-scroll-dragging {
 //   -webkit-user-select: none;
 //   -moz-user-select: none;
 //   -ms-user-select: none;
-//   user-select: none; 
+//   user-select: none;
 // }
 
 // .has-scroll-smooth body {
-//   overflow: hidden; 
+//   overflow: hidden;
 // }
 
 // .has-scroll-smooth [data-scroll-container] {
-//   min-height: 100vh; 
+//   min-height: 100vh;
 // }
 
 // [data-scroll-direction="horizontal"] [data-scroll-container] {
 //   height: 100vh;
 //   display: inline-block;
-//   white-space: nowrap; 
+//   white-space: nowrap;
 // }
 
 // [data-scroll-direction="horizontal"] [data-scroll-section] {
 //   display: inline-block;
 //   vertical-align: top;
 //   white-space: nowrap;
-//   height: 100%; 
+//   height: 100%;
 // }
 
 // .c-scrollbar {
@@ -141,15 +178,15 @@ h6 {
 //   height: 100%;
 //   transform-origin: center right;
 //   transition: transform 0.3s, opacity 0.3s;
-//   opacity: 0; 
+//   opacity: 0;
 // }
 
 //   .c-scrollbar:hover {
-//     transform: scaleX(1.45); 
+//     transform: scaleX(1.45);
 // }
 
 //   .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
-//     opacity: 1; 
+//     opacity: 1;
 // }
 
 // [data-scroll-direction="horizontal"] .c-scrollbar {
@@ -157,11 +194,11 @@ h6 {
 //     height: 10px;
 //     top: auto;
 //     bottom: 0;
-//     transform: scaleY(1); 
+//     transform: scaleY(1);
 // }
 
 // [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-//       transform: scaleY(1.3); 
+//       transform: scaleY(1.3);
 // }
 
 // .c-scrollbar_thumb {
@@ -174,13 +211,29 @@ h6 {
 //   border-radius: 10px;
 //   margin: 2px;
 //   cursor: -webkit-grab;
-//   cursor: grab; 
+//   cursor: grab;
 // }
 //   .has-scroll-dragging .c-scrollbar_thumb {
 //     cursor: -webkit-grabbing;
-//     cursor: grabbing; 
+//     cursor: grabbing;
 // }
 //   [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
 //     right: auto;
-//     bottom: 0; 
+//     bottom: 0;
 // }
+
+@media (max-width: $md) {
+  .recentProjects .alice-carousel__prev-btn {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    left: 3%;
+  }
+
+  .recentProjects .alice-carousel__next-btn {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    right: -6%;
+  }
+}

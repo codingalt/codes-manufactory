@@ -17,7 +17,7 @@ const Brands = () => {
           <img src={profile2} alt="Profile" />
           <img src={profile3} alt="Profile" />
         </div>
-        <p className="text-sm w-64 font-light">
+        <p className="text-tiny md:text-sm w-64 font-light">
           Join over 30+ happy customers and book a demo today
         </p>
       </div>

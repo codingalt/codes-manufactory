@@ -2,19 +2,19 @@ import React from "react";
 import { plans } from "./data";
 import arrow from "../../assets/arrow-right-circle.png";
 import arrowDark from "../../assets/arrow-right-circle-dark.png";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
   const navigate = useNavigate();
   return (
     <section className="py-0">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-6">
+      <div className="max-w-screen-xl mx-auto px-1.5 md:px-6">
         <div className="mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
           {plans?.map((item, idx) => (
             <div
               key={idx}
-              className={`relative h-[613px] max-w-[364px] flex-1 flex items-stretch flex-col rounded-lg border border-[#A1AEBF] mt-6 sm:mt-0 ${
-                item.isMostPop ? "mt-10 bg-white text-[#111111]" : ""
+              className={`relative h-[625px] max-w-[364px] flex-1 flex items-stretch flex-col rounded-lg border border-[#A1AEBF] mb-8 md:mb-0 mt-6 sm:mt-0 ${
+                item.isMostPop ? "mt-14 md:mt-10 bg-white text-[#111111]" : ""
               }`}
             >
               {item.isMostPop ? (

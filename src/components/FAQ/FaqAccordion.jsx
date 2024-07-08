@@ -63,8 +63,14 @@ const FaqAccordion = () => {
             }
             classNames={
               String(index + 1) === selectedKeys?.currentKey
-                ? { title: "text-[#212121]" }
-                : { title: "text-gray-200", content: "max-w-sm" }
+                ? {
+                    title: "text-[#212121] md:text-large text-[14px]",
+                    content: "text-[#212121] md:text-medium text-[14px] pt-5",
+                  }
+                : {
+                    title: "text-gray-200 md:text-large text-[14px]",
+                    content: "max-w-sm md:text-medium text-[14px]",
+                  }
             }
             style={
               String(index + 1) === selectedKeys?.currentKey

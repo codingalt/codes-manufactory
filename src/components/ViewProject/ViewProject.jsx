@@ -11,7 +11,6 @@ import { ParallaxScrollDemo } from "./ParallaxScrollDemo";
 const ViewProject = () => {
   const { projectId } = useParams();
   const [project, setProject] = useState();
-  console.log(project);
 
   useEffect(()=>{
    const filteredData = projectsData?.filter(
@@ -30,7 +29,7 @@ const ViewProject = () => {
 
         {/* Content  */}
         <div className={css.content}>
-          <div className="lg:pt-16 2xl:pt-24 max-w-screen-xl mx-auto px-4 md:px-8">
+          <div className="lg:pt-16 2xl:pt-24 max-w-screen-xl mx-auto px-4 md:px-8 lg:px-14">
             <div className={css.title}>{project?.title}</div>
 
             <div className="max-w-screen-md">
@@ -63,7 +62,7 @@ const ViewProject = () => {
 
       {/* Project Images  */}
       {/* <ProjectImages /> */}
-      <div className="w-full mt-[13rem] mb-[10rem]">
+      <div className="w-full lg:mt-[7rem] 2xl:mt-[13rem] mb-[10rem] px-4 lg:px-10 2xl:px-0">
       <ParallaxScrollDemo images={project} />
       </div>
       {/* <Projects
