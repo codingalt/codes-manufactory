@@ -7,10 +7,15 @@ import projectsData from "../../utils/projectsData.json";
 import { truncateText } from "../../utils/helpers";
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useIntersectionObserver, useMediaQuery } from "@uidotdev/usehooks";
 
 const Projects = () => {
   const navigate = useNavigate();
+  const [ref, entry] = useIntersectionObserver({
+    threshold: 0,
+    root: null,
+    rootMargin: "0px",
+  });
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -69,14 +74,13 @@ const Projects = () => {
   };
 
   const onUpdated = (e) => {};
-
   return (
-    <div className={`${css.projects} recentProjects`}>
+    <div className={`${css.projects} recentProjects`} ref={ref}>
       <AliceCarousel
         mouseTracking
         infinite
-        autoPlay
-        autoPlayInterval={isSmallDevice ? 3000 : 3000}
+        autoPlay={entry?.isIntersecting}
+        autoPlayInterval={isSmallDevice ? 5000 : 3000}
         animationDuration={isSmallDevice ? 2000 : 3000}
         items={items}
         activeIndex={activeIndex}

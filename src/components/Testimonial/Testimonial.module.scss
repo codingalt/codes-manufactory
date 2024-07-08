@@ -100,6 +100,10 @@
           gap: 12px;
           margin-top: 2rem;
 
+          img{
+            max-height: 45px;
+          }
+
           .name {
             display: flex;
             flex-direction: column;

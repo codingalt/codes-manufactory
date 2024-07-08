@@ -13,7 +13,9 @@ const Cards = () => {
           {plans?.map((item, idx) => (
             <div
               key={idx}
-              className={`relative h-[625px] max-w-[364px] flex-1 flex items-stretch flex-col rounded-lg border border-[#A1AEBF] mb-8 md:mb-0 mt-6 sm:mt-0 ${
+              className={`relative h-[625px] max-w-[364px] flex-1 flex items-stretch flex-col rounded-lg border border-[#A1AEBF] ${
+                idx === 0 ? "mb-14" : "mb-9"
+              } md:mb-0 mt-6 sm:mt-0 ${
                 item.isMostPop ? "mt-14 md:mt-10 bg-white text-[#111111]" : ""
               }`}
             >

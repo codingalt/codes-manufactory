@@ -24,7 +24,7 @@ export const data = [
     review: `"Working with this team was an absolute pleasure. They delivered a top-notch product within the agreed timeframe and exceeded our expectations. Their attention to detail and commitment to understanding our needs truly set them apart. Highly recommend!"`,
     stars: 5,
     profile: profile3,
-    name: "Muhammad Hateem",
+    name: "Ahmad Javed",
     position: "CEO, Netsol",
   },
 ];

@@ -3,12 +3,12 @@ import { Image } from "@nextui-org/react";
 
 export const Logo = ({ state, setState, hideMenu }) => (
   <div
-    className={` transition-all flex items-center justify-between py-3 md:block`}
+    className={` transition-all flex items-center justify-between pt-3 pb-2 md:pt-3 md:pb-3 md:block`}
   >
     <Link to="/" className="dark">
       <Image
         src="https://www.floatui.com/logo-dark.svg"
-        width={120}
+        width={118}
         height={50}
         alt="Float UI logo"
         className="dark"
@@ -17,7 +17,7 @@ export const Logo = ({ state, setState, hideMenu }) => (
     {!hideMenu && (
       <div className="md:hidden">
         <button
-          className="menu-btn text-gray-400 hover:text-gray-300 outline-none"
+          className="menu-btn text-gray-50 hover:text-gray-300 outline-none"
           onClick={() => setState(!state)}
         >
           {state ? (

@@ -33,7 +33,7 @@ const Header = () => {
         className={`pb-0 md:px-7 md:text-sm duration-700 transition-all ease-soft-spring ${
           state
             ? "fixed opacity-100 z-50 top-0 inset-x-0 bg-[#060606] bg-opacity-70 rounded-none md:mx-0 md:mt-0 md:relative md:bg-transparent pb-10"
-            : "bg-[#060606] bg-opacity-35 z-50 fixed top-0 left-0 right-0"
+            : "bg-[#060606] bg-opacity-55 z-50 fixed top-0 left-0 right-0"
         }`}
       >
         <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">

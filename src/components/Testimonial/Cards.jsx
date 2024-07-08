@@ -4,7 +4,7 @@ import { data } from "./data";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { FaStar } from "react-icons/fa";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useIntersectionObserver, useMediaQuery } from "@uidotdev/usehooks";
 
 const responsive = {
   0: { items: 1 },
@@ -13,6 +13,11 @@ const responsive = {
 };
 
 const Cards = () => {
+  const [ref, entry] = useIntersectionObserver({
+    threshold: 0,
+    root: null,
+    rootMargin: "0px",
+  });
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   const renderDotsItem = ({ isActive }) => {
@@ -24,13 +29,13 @@ const Cards = () => {
   };
 
   return (
-    <div className={css.cards}>
+    <div className={css.cards} ref={ref}>
       <AliceCarousel
         mouseTracking
         responsive={responsive}
         disableButtonsControls
         renderDotsItem={renderDotsItem}
-        autoPlay
+        autoPlay={entry?.isIntersecting}
         autoPlayInterval={isSmallDevice ? 4000 : 4000}
         animationDuration={isSmallDevice ? 1000 : 1500}
         infinite
