@@ -10,7 +10,12 @@ import brand4 from "../../assets/brand4.png";
 
 const Brands = () => {
   return (
-    <div className={css.brands}>
+    <div
+      className={css.brands}
+      data-aos="fade-up"
+      data-aos-delay="1050"
+      data-aos-duration="1500"
+    >
       <div className={css.leftSide}>
         <div className={css.images}>
           <img src={profile1} alt="Profile" />

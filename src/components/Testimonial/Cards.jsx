@@ -22,9 +22,9 @@ const Cards = () => {
 
   const renderDotsItem = ({ isActive }) => {
     return isActive ? (
-      <div className="w-[40px] h-[8px] transition-all ml-2 bg-[#FB7957] rounded-full cursor-pointer"></div>
+      <div className="w-[40px] h-[6px] transition-all ml-2 bg-[#FB7957] rounded-full cursor-pointer"></div>
     ) : (
-      <div className="w-[20px] h-[8px] transition-all ml-2 bg-white rounded-full cursor-pointer"></div>
+      <div className="w-[20px] h-[6px] transition-all ml-2 bg-white rounded-full cursor-pointer"></div>
     );
   };
 

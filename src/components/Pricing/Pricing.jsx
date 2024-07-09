@@ -4,7 +4,7 @@ import Cards from "./Cards";
 
 const Pricing = () => {
   return (
-    <div className={css.pricing}>
+    <div className={css.pricing} id="pricing">
       {/* Background grid  */}
       <div
         className="absolute h-[100%] w-full overflow-hidden"

@@ -87,7 +87,9 @@ const Cards = () => {
               </ul>
 
               <button
-                className={`px-3 py-3 mb-8 mt-3 rounded-lg w-[78%] mx-auto border border-[#A1AEBF] font-semibold text-sm duration-150 text-white bg-transparent active:bg-[#FB7957]`}
+                className={`${
+                  item.isMostPop ? "" : "hover:bg-white hover:text-default-800"
+                } px-3 py-3 mb-8 mt-3 transition-all rounded-lg w-[78%] mx-auto border border-[#A1AEBF] font-semibold text-sm duration-150 text-white bg-transparent`}
                 style={
                   item.isMostPop
                     ? { background: "#FB7957", border: "none", color: "#fff" }

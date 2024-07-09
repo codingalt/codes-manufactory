@@ -9,7 +9,7 @@ import linkedin from "../../assets/linkedin.png";
 
 const Footer = () => {
   return (
-    <div className={css.footer}>
+    <div className={css.footer} id="about">
       <div className={css.shape1}></div>
       <div className="lg:pt-10 lg:pb-20 2xl:pt-10 2xl:pb-20 max-w-screen-xl mx-auto px-3 md:px-4">
         <footer className="footer bg-transparent mb-0 p-10 bg-base-200 text-base-content">

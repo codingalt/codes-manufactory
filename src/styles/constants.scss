@@ -5,6 +5,11 @@ $xl: 1280px;
 $xxl: 1536px;
 $primary: #FB7957;
 $background: #060606;
+$error: #ff0000;
+
+.inputBorder {
+  border: 1px solid $error !important;
+}
 
 @mixin flexCenter{
     display: flex;

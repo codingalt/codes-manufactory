@@ -4,7 +4,7 @@ import Cards from "./Cards";
 
 const OurServices = () => {
   return (
-    <div className={css.services}>
+    <div className={css.services} id="services">
       <div className="lg:pt-20 lg:pb-28 2xl:pt-28 2xl:pb-28 max-w-screen-xl mx-auto px-4 md:px-20 2xl:px-8">
         <div className={css.content}>
           <div className={css.top}>

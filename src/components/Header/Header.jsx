@@ -1,24 +1,50 @@
 import React, { useEffect, useState } from "react";
-import css from "./Header.module.scss";
 import { Logo } from "./Logo";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Header = () => {
   const [state, setState] = useState(false);
+  const [activeLink, setActiveLink] = useState(
+    window.location.hash || window.location.pathname
+  );
+  const [pathname, setPathname] = useState(window.location.pathname);
 
-  const navigation = [
-    { title: "Home", path: "/" },
-    { title: "About", path: "#" },
-    { title: "Services", path: "#" },
-    { title: "Pricing", path: "#" },
-  ];
+   const navigation = [
+     {
+       title: "Home",
+       path:
+         pathname.includes("/projects") || pathname.includes("/selectService")
+           ? "/"
+           : "#",
+     },
+     { title: "About", path: "#about" },
+     { title: "Services", path: "#services" },
+     { title: "Pricing", path: "#pricing" },
+   ];
 
   useEffect(() => {
     document.onclick = (e) => {
       const target = e.target;
       if (!target.closest(".menu-btn")) setState(false);
     };
+
+    const handleHashChange = () => {
+      setActiveLink(window.location.hash || window.location.pathname);
+      setPathname(window.location.pathname);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("popstate", handleHashChange);
+    };
   }, []);
+
+  const handleSetActive = (path) => {
+    setActiveLink(path);
+  };
 
   return (
     <header>
@@ -30,13 +56,16 @@ const Header = () => {
         <Logo state={state} setState={setState} />
       </div>
       <nav
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-duration="700"
         className={`pb-0 md:px-7 md:text-sm duration-700 transition-all ease-soft-spring ${
           state
             ? "fixed opacity-100 z-50 top-0 inset-x-0 bg-[#060606] bg-opacity-70 rounded-none md:mx-0 md:mt-0 md:relative md:bg-transparent pb-10"
             : "bg-[#060606] bg-opacity-55 z-50 fixed top-0 left-0 right-0"
         }`}
       >
-        <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+        <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-5 md:flex md:px-8">
           <Logo state={state} setState={setState} />
           <div
             className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
@@ -51,12 +80,20 @@ const Header = () => {
                     className="relative group text-white lg:text-[15px] 2xl:text-[16px] font-light"
                   >
                     <Link
+                      smooth
                       to={item.path}
+                      onClick={() => handleSetActive(item.path)}
                       className="block group-hover:text-gray-100 transition-colors"
                     >
                       {item.title}
                     </Link>
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-[#fff] transition-all duration-400 group-hover:w-[20%] md:group-hover:w-full"></span>
+                    <span
+                      className={`absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-[#fff] transition-all duration-400 ${
+                        activeLink === item.path
+                          ? "w-full"
+                          : "group-hover:w-[20%] md:group-hover:w-full"
+                      }`}
+                    ></span>
                   </li>
                 );
               })}

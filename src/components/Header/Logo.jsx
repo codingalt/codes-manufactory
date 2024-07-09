@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { Image } from "@nextui-org/react";
 
 export const Logo = ({ state, setState, hideMenu }) => (
   <div
-    className={` transition-all flex items-center justify-between pt-3 pb-2 md:pt-3 md:pb-3 md:block`}
+    className={`transition-all flex items-center justify-between pt-2 pb-2 md:pt-3 md:pb-3 md:block`}
   >
     <Link to="/" className="dark">
       <Image

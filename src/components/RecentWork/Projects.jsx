@@ -80,7 +80,7 @@ const Projects = () => {
         mouseTracking
         infinite
         autoPlay={entry?.isIntersecting}
-        autoPlayInterval={isSmallDevice ? 5000 : 3000}
+        autoPlayInterval={isSmallDevice ? 4000 : 3000}
         animationDuration={isSmallDevice ? 2000 : 3000}
         items={items}
         activeIndex={activeIndex}
