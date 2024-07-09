@@ -90,8 +90,8 @@ const Header = () => {
                     <span
                       className={`absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-[#fff] transition-all duration-400 ${
                         activeLink === item.path
-                          ? "w-full"
-                          : "group-hover:w-[20%] md:group-hover:w-full"
+                          ? "w-[19%] md:w-full"
+                          : "group-hover:w-[19%] md:group-hover:w-full"
                       }`}
                     ></span>
                   </li>

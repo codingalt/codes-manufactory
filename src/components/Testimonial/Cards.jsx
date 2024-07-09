@@ -37,7 +37,7 @@ const Cards = () => {
         renderDotsItem={renderDotsItem}
         autoPlay={entry?.isIntersecting}
         autoPlayInterval={isSmallDevice ? 4000 : 4000}
-        animationDuration={isSmallDevice ? 1000 : 1500}
+        animationDuration={isSmallDevice ? 800 : 1500}
         infinite
       >
         {data?.map((item, index) => {

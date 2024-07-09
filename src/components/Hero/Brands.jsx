@@ -10,7 +10,7 @@ import brand4 from "../../assets/brand4.png";
 
 const Brands = () => {
   return (
-    <div className={css.brands}>
+    <div className={`${css.brands}`}>
       <div className={css.leftSide}>
         <div className={css.images}>
           <img src={profile1} alt="Profile" />
@@ -22,7 +22,7 @@ const Brands = () => {
         </p>
       </div>
       <div className={css.rightSide}>
-        <div className={css.images}>
+        <div className={`${css.images} scrollbar-hide overflow-x-auto`}>
           <img src={brand1} alt="Brand" />
           <img src={brand2} alt="Brand" />
           <img src={brand3} alt="Brand" />
