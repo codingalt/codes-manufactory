@@ -63,6 +63,12 @@
     }
   }
 
+  @media (max-width: 1000px) {
+    & {
+      padding: 4rem .9rem;
+    }
+  }
+
   @media (max-width: 768px) {
     & {
       padding: 4rem 0.9rem;

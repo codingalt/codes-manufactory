@@ -5,6 +5,7 @@
 
 .wrapper {
   width: 100%;
+  min-height: 100vh;
   position: relative;
   background: $background;
 
@@ -202,7 +203,7 @@
           flex-direction: column !important;
 
           &:last-child {
-            margin-bottom: .8rem;
+            margin-bottom: 0.8rem;
           }
 
           .left {

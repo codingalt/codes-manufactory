@@ -9,18 +9,18 @@ const Header = () => {
   );
   const [pathname, setPathname] = useState(window.location.pathname);
 
-   const navigation = [
-     {
-       title: "Home",
-       path:
-         pathname.includes("/projects") || pathname.includes("/selectService")
-           ? "/"
-           : "#",
-     },
-     { title: "About", path: "#about" },
-     { title: "Services", path: "#services" },
-     { title: "Pricing", path: "#pricing" },
-   ];
+  const navigation = [
+    {
+      title: "Home",
+      path:
+        pathname.includes("/projects") || pathname.includes("/selectService")
+          ? "/"
+          : "#",
+    },
+    { title: "About", path: "#about" },
+    { title: "Services", path: "#services" },
+    { title: "Pricing", path: "#pricing" },
+  ];
 
   useEffect(() => {
     document.onclick = (e) => {
@@ -62,10 +62,12 @@ const Header = () => {
             : "bg-[#060606] bg-opacity-55 z-50 fixed top-0 left-0 right-0"
         }`}
       >
-        <div data-aos="fade-down"
-        data-aos-delay="200"
-        data-aos-duration="700"
-         className="gap-x-14 items-center max-w-screen-xl mx-auto px-5 md:flex md:px-8">
+        <div
+          data-aos="fade-down"
+          data-aos-delay="200"
+          data-aos-duration="700"
+          className="gap-x-14 md:gap-x-6 lg:gap-x-14 items-center max-w-screen-xl mx-auto px-5 md:flex md:px-1 lg:px-8"
+        >
           <Logo state={state} setState={setState} />
           <div
             className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
@@ -100,7 +102,7 @@ const Header = () => {
               <li>
                 <Link
                   to="#"
-                  className="flex items-center justify-center gap-x-1 py-3 px-4 h-[40px] mx-auto mt-10 md:mt-0 lg:h-[38px] w-[85%] lg:w-[138px] 2xl:w-[141px] 2xl:h-[44px] text-white border font-medium bg-transparent duration-150 md:inline-flex transition-all hover:bg-white hover:text-default-800"
+                  className="flex items-center justify-center gap-x-1 py-3 px-4 h-[40px] mx-auto mt-10 md:mt-0 lg:h-[38px] w-[85%] md:w-[150px] lg:w-[138px] 2xl:w-[141px] 2xl:h-[44px] text-white border font-medium bg-transparent duration-150 md:inline-flex transition-all hover:bg-white hover:text-default-800"
                 >
                   Contact Now
                 </Link>

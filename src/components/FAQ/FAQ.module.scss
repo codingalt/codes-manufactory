@@ -48,6 +48,13 @@
     }
   }
 
+  @media (max-width: 1000px) {
+    & {
+      padding: 4rem .9rem;
+      margin-bottom: 4rem;
+    }
+  }
+
   @media (max-width: 768px) {
     & {
       padding: 2.7rem 0.9rem;

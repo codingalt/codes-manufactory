@@ -3,7 +3,7 @@ import css from "./ViewProject.module.scss";
 import problemImage from "../../assets/problem.png";
 import solution from "../../assets/solution.png";
 
-const ProblemSolutionSection = ({ problem,content }) => {
+const ProblemSolutionSection = ({ problem, content }) => {
   return (
     <div
       style={
@@ -16,6 +16,9 @@ const ProblemSolutionSection = ({ problem,content }) => {
             }
       }
       className={`${css.problem} max-w-screen-md`}
+      data-aos={problem && "fade-up"}
+      data-aos-delay="500"
+      data-aos-duration="600"
     >
       <div className={`${css.left}`}>
         <p>{problem ? "Problem :" : "Solution :"}</p>

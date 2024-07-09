@@ -58,6 +58,7 @@
       .card {
         border: 1px solid #a1aebf;
         height: 494px;
+        height: auto;
         max-width: 364px;
         border-radius: 8px;
         padding: 1.5rem 2.5rem;
@@ -123,6 +124,12 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    & {
+      padding: 4rem .9rem;
     }
   }
 
