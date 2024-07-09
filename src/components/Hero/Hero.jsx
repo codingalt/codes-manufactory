@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./Hero.module.scss";
-import arrow from "../../assets/arrow.svg"
+import arrow from "../../assets/arrow.svg";
 import { FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
 import Brands from "./Brands";
 
@@ -80,7 +80,14 @@ const Hero = () => {
       </div>
 
       {/* Brands  */}
-      <Brands />
+      <div
+        className="w-full"
+        data-aos="fade-up"
+        data-aos-delay="1050"
+        data-aos-duration="1500"
+      >
+        <Brands />
+      </div>
     </div>
   );
 };

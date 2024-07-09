@@ -18,6 +18,9 @@ const Cards = () => {
               } md:mb-0 mt-6 sm:mt-0 ${
                 item.isMostPop ? "mt-14 md:mt-10 bg-white text-[#111111]" : ""
               }`}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay={idx === 0 ? 500 : idx === 1 ? 800 : 1000}
             >
               {item.isMostPop ? (
                 <span className="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full shadow-md bg-[#FB7957] text-center text-white text-sm font-semibold">

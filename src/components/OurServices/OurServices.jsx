@@ -7,12 +7,16 @@ const OurServices = () => {
     <div className={css.services} id="services">
       <div className="lg:pt-20 lg:pb-28 2xl:pt-28 2xl:pb-28 max-w-screen-xl mx-auto px-4 md:px-20 2xl:px-8">
         <div className={css.content}>
-          <div className={css.top}>
+          <div className={css.top} data-aos="fade-up" data-aos-duration="500">
             <div className={css.line}></div>
             <p>OUR SERVICES</p>
           </div>
           <div className={css.heading}>
-            <div className={css.left}>
+            <div
+              className={css.left}
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <p>Unlocking Your</p>
               <p>Potential</p>
             </div>

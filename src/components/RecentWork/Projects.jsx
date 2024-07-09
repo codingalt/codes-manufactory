@@ -75,7 +75,12 @@ const Projects = () => {
 
   const onUpdated = (e) => {};
   return (
-    <div className={`${css.projects} recentProjects`} ref={ref}>
+    <div
+      className={`${css.projects} recentProjects`}
+      ref={ref}
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
       <AliceCarousel
         mouseTracking
         infinite

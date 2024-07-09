@@ -31,7 +31,12 @@ const Cards = () => {
   };
 
   return (
-    <div className={css.cards} ref={ref}>
+    <div
+      className={css.cards}
+      ref={ref}
+      data-aos="fade-up"
+      data-aos-duration="600"
+    >
       <AliceCarousel
         mouseTracking
         responsive={responsive}

@@ -209,11 +209,14 @@
 
         .technologies{
           margin-top: 2.9rem;
+          gap: 10px;
 
           .card{
+            padding: 1.5rem 1.2rem;
+
             .image{
-              width: 32px;
-              height: 32px;
+              width: 30px;
+              height: 30px;
             }
 
             h3{

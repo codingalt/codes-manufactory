@@ -4,7 +4,7 @@ import { Image } from "@nextui-org/react";
 import css from "./SelectService.module.scss";
 import { useTrail, animated as a } from "@react-spring/web";
 
-const config = { mass: 15, tension: 5500, friction: 270 };
+const config = { mass: 15, tension: 5100, friction: 260 };
 
 const Technologies = () => {
   const [toggle, set] = useState(true);
@@ -37,7 +37,7 @@ const Technologies = () => {
             key={item.id}
             onClick={() => setSelected(item.id)}
           >
-            <div className={css.image}>
+            <div className={`${css.image} dark`}>
               <Image
                 src={item.image}
                 width={"100%"}
