@@ -9,7 +9,7 @@ export const Logo = ({ state, setState, hideMenu, isSmallDevice }) => (
     <Link to="/" className="dark">
       <Image
         src={logo}
-        width={isSmallDevice ? 187 : 290}
+        width={isSmallDevice ? 189 : 290}
         alt="Labors of Tech logo"
         className="dark"
       />
