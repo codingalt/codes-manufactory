@@ -12,20 +12,12 @@ const Pricing = () => {
       <div className={css.shape1}></div>
       <div className="lg:pt-20 lg:pb-28 2xl:pt-28 2xl:pb-28 max-w-screen-xl mx-auto px-4 md:px-20 2xl:px-8">
         <div className={css.content}>
-          <div
-            className={css.top}
-            data-aos="fade-right"
-            data-aos-duration="500"
-          >
+          <div className={css.top}>
             <div className={css.line}></div>
             <p>PRICING</p>
           </div>
           <div className={css.heading}>
-            <div
-              className={css.left}
-              data-aos="fade-left"
-              data-aos-duration="500"
-            >
+            <div className={css.left}>
               <p className="max-w-md">
                 <span className="text-[#FB7957]">Select </span>A Plan That’s
                 Right For YOu

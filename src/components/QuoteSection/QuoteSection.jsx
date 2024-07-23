@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const QuoteSection = () => {
   return (
-    <div className={css.quotesWrapper}>
+    <div className={css.quotesWrapper} id="contact">
       <div className="md:py-10 lg:py-0 lg:pt-20 lg:pb-28 2xl:pt-28 2xl:pb-28 max-w-screen-xl mx-auto px-4 md:px-20 2xl:px-8">
         <div className={css.content}>
           <div className={css.left}>
@@ -26,6 +26,7 @@ const QuoteSection = () => {
                 className={`${css.bottom} max-w-lg`}
                 data-aos="fade-up"
                 data-aos-duration="700"
+                data-aos-offset="0"
               >
                 Backed by a team of seasoned professionals with diverse skill
                 sets, we boast a rich portfolio of successful projects spanning
@@ -42,6 +43,7 @@ const QuoteSection = () => {
                 placeholder="Email"
                 data-aos="fade-up"
                 data-aos-duration="500"
+                data-aos-offset="50"
               />
               <textarea
                 cols="30"
@@ -49,6 +51,7 @@ const QuoteSection = () => {
                 placeholder="Describe your project"
                 data-aos="fade-up"
                 data-aos-duration="600"
+                data-aos-offset="50"
               ></textarea>
               <button>
                 Get a Quote <FaArrowRight />

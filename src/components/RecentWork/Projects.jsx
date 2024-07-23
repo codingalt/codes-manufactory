@@ -43,7 +43,7 @@ const Projects = () => {
           <p>{item.title}</p>
           {isEven && (
             <span>
-              {truncateText(item.description, isSmallDevice ? 40 : 115)}
+              {truncateText(item.description, isSmallDevice ? 34 : 115)}
             </span>
           )}
         </div>

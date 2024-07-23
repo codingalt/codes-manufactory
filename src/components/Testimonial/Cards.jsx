@@ -42,7 +42,22 @@ const Cards = () => {
       >
         {data?.map((item, index) => {
           return (
-            <div key={index} className={css.card}>
+            <div
+              key={index}
+              className={css.card}
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay={
+                isSmallDevice
+                  ? 200
+                  : index === 0
+                  ? 500
+                  : index === 1
+                  ? 800
+                  : 1000
+              }
+              data-aos-offset="0"
+            >
               <div className={css.review}>{item.review}</div>
               <div className={css.stars}>
                 <FaStar />

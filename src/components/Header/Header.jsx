@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { HashLink as Link } from "react-router-hash-link";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const Header = () => {
   const [state, setState] = useState(false);
@@ -8,6 +9,7 @@ const Header = () => {
     window.location.hash || window.location.pathname
   );
   const [pathname, setPathname] = useState(window.location.pathname);
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   const navigation = [
     {
@@ -17,9 +19,9 @@ const Header = () => {
           ? "/"
           : "#",
     },
-    { title: "About", path: "#about" },
     { title: "Services", path: "#services" },
     { title: "Pricing", path: "#pricing" },
+    { title: "About", path: "#about" },
   ];
 
   useEffect(() => {
@@ -53,7 +55,7 @@ const Header = () => {
           state ? "mx-2 pb-4 opacity-0 hidden" : "hidden"
         }`}
       >
-        <Logo state={state} setState={setState} />
+        <Logo state={state} setState={setState} isSmallDevice={isSmallDevice} />
       </div>
       <nav
         className={`pb-0 md:px-7 md:text-sm duration-700 transition-all ease-soft-spring ${
@@ -68,7 +70,11 @@ const Header = () => {
           data-aos-duration="700"
           className="gap-x-14 md:gap-x-6 lg:gap-x-14 items-center max-w-screen-xl mx-auto px-5 md:flex md:px-1 lg:px-8"
         >
-          <Logo state={state} setState={setState} />
+          <Logo
+            state={state}
+            setState={setState}
+            isSmallDevice={isSmallDevice}
+          />
           <div
             className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
               state ? "block" : "hidden"
@@ -101,7 +107,9 @@ const Header = () => {
               })}
               <li>
                 <Link
-                  to="#"
+                  to="#contact"
+                  smooth
+                  onClick={() => handleSetActive("#contact")}
                   className="flex items-center justify-center gap-x-1 py-3 px-4 h-[40px] mx-auto mt-10 md:mt-0 lg:h-[38px] w-[85%] md:w-[150px] lg:w-[138px] 2xl:w-[141px] 2xl:h-[44px] text-white border font-medium bg-transparent duration-150 md:inline-flex transition-all hover:bg-white hover:text-default-800"
                 >
                   Contact Now
