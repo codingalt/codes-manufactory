@@ -16,7 +16,7 @@ const Footer = () => {
           <aside>
             <Logo hideMenu={true} />
             <p className="text-white mt-2">
-              ACME Industries Ltd.
+              Labors of Tech.
               <br />
               Providing reliable tech since 1992
             </p>

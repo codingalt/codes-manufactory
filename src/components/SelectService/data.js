@@ -1,11 +1,11 @@
-import t1 from "../../assets/Techs/t1.svg";
-import t2 from "../../assets/Techs/t2.svg";
-import t3 from "../../assets/Techs/t3.svg";
-import t4 from "../../assets/Techs/t4.svg";
+import t1 from "../../assets/Techs/react.png";
+import t2 from "../../assets/Techs/nodejs.png";
+import t3 from "../../assets/Techs/typescript.png";
+import t4 from "../../assets/Techs/php.png";
 import t5 from "../../assets/Techs/t5.svg";
 import t6 from "../../assets/Techs/t6.svg";
 import t7 from "../../assets/Techs/t7.svg";
-import t8 from "../../assets/Techs/t8.svg";
+import t8 from "../../assets/Techs/question.png";
 
 
 export const technologiesData = [
