@@ -6,7 +6,7 @@ const Copyright = () => {
   return (
     <div className="w-full py-5">
       <p className="font-normal text-[12px] md:text-[14px] text-white text-center">
-        &copy; {currentYear} Codes Manufactory. All rights reserved.
+        &copy; {currentYear} Labors of Tech. All rights reserved.
       </p>
     </div>
   );

@@ -86,7 +86,7 @@ const Projects = () => {
         infinite
         autoPlay={entry?.isIntersecting}
         autoPlayInterval={isSmallDevice ? 4000 : 3000}
-        animationDuration={isSmallDevice ? 800 : 3000}
+        animationDuration={isSmallDevice ? 500 : 3000}
         items={items}
         activeIndex={activeIndex}
         responsive={responsive}
