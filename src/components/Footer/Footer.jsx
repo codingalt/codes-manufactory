@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="text-white mt-2">
               Labors of Tech.
               <br />
-              Providing reliable tech since 1992
+              Providing reliable tech since 2020
             </p>
           </aside>
           <nav className="space-y-2">
