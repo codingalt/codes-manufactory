@@ -1,20 +1,15 @@
 import { HashLink as Link } from "react-router-hash-link";
 import { Image } from "@nextui-org/react";
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
 
-export const Logo = ({
-  state,
-  setState,
-  hideMenu,
-  isSmallDevice,
-}) => (
+export const Logo = ({ state, setState, hideMenu, isSmallDevice }) => (
   <div
     className={`transition-all flex items-center justify-between pt-2 pb-2 md:pt-4 md:pb-2 md:block`}
   >
     <Link to="/" className="dark">
       <Image
         src={logo}
-        width={isSmallDevice ? 180 : 290}
+        width={isSmallDevice ? 187 : 290}
         alt="Labors of Tech logo"
         className="dark"
       />
