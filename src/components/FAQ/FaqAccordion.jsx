@@ -9,25 +9,39 @@ const FaqAccordion = () => {
   const data = [
     {
       id: 1,
-      title: "What industries do you work with?",
-      content: "",
+      title: "What services does Labors Of Tech offer?",
+      content:
+        "We offer a wide range of services including web development, UI/UX design, mobile app development, and digital marketing to help your business grow online.",
     },
     {
       id: 2,
-      title: "How do you ensure the security of the developed solutions?",
-      content: "",
+      title: "How do I start a project with Labors Of Tech?",
+      content:
+        "You can start by contacting us through our website's contact form, email, or phone. We'll discuss your project requirements and provide a customized plan.",
     },
     {
       id: 3,
-      title:
-        "How do you handle changes or revisions during the development process?",
+      title: "What is your pricing model?",
       content:
-        "Detail the support and maintenance services your company offers post-project completion, including troubleshooting, updates, and enhancements. Provide information on your pricing model, whether it's based on fixed-price contracts, hourly rates, or custom quotes tailored to each project's requirements.",
+        "Our pricing model varies based on the project scope and requirements. We offer both fixed-price and hourly rate options to suit different needs.",
     },
     {
       id: 4,
-      title: "Do you provide ongoing support and maintenance?",
-      content: "",
+      title: "How long does it take to complete a project?",
+      content:
+        "The timeline depends on the project's complexity and scope. Typically, a standard website project takes 4-6 weeks, while larger projects may take longer.",
+    },
+    {
+      id: 5,
+      title: "Do you offer post-launch support?",
+      content:
+        "Yes, we provide ongoing support and maintenance services to ensure your website or application remains up-to-date and functional.",
+    },
+    {
+      id: 6,
+      title: "How do you ensure the security of my project?",
+      content:
+        "We implement robust security measures, including secure coding practices and regular security audits, to protect your project from vulnerabilities.",
     },
   ];
 

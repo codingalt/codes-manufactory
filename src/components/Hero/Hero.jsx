@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import css from "./Hero.module.scss";
 import arrow from "../../assets/arrow.svg";
 import { FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
 import Brands from "./Brands";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Hero = () => {
   return (
@@ -55,26 +56,42 @@ const Hero = () => {
             data-aos-duration="1600"
           >
             <p className="md:max-w-md lg:max-w-xl">
-              We make awesome websites that help you reach more people, sell
-              more products. Our websites are designed to make sure you succeed.
+              From intuitive web solutions to innovative mobile apps and
+              stunning UI/UX designs, our goal is to empower your business to
+              reach new heights.
             </p>
           </div>
 
           <div className={css.buttons}>
-            <button
-              data-aos="fade-right"
-              data-aos-delay="950"
-              data-aos-duration="1600"
+            <Link
+              to="#contact"
+              smooth
+              onClick={() => handleSetActive("#contact")}
             >
-              Get Started
-            </button>
-            <button
-              data-aos="fade-left"
-              data-aos-delay="950"
-              data-aos-duration="1600"
+              <button
+                data-aos="fade-right"
+                data-aos-delay="950"
+                data-aos-duration="1600"
+              >
+                Get Started
+              </button>
+            </Link>
+
+            <Link
+              to="#contact"
+              smooth
+              onClick={() => handleSetActive("#contact")}
+              className="bg-transparent"
             >
-              Let's Chat <FaArrowRight />
-            </button>
+              <button
+                data-aos="fade-left"
+                data-aos-delay="950"
+                data-aos-duration="1600"
+                style={{background:"transparent",color:"#fff",gap:"14px"}}
+              >
+                Let's Chat <FaArrowRight />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
