@@ -10,6 +10,12 @@ const Header = () => {
   );
   const [pathname, setPathname] = useState(window.location.pathname);
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+   const isLargeDevice = useMediaQuery(
+     "only screen and (min-width : 993px) and (max-width : 1200px)"
+   );
+   const isExtraLargeDevice = useMediaQuery(
+     "only screen and (min-width : 1201px) and (max-width : 1580px)"
+   );
 
   const navigation = [
     {
@@ -68,12 +74,13 @@ const Header = () => {
           data-aos="fade-down"
           data-aos-delay="200"
           data-aos-duration="700"
-          className="gap-x-14 md:gap-x-6 lg:gap-x-14 items-center max-w-screen-xl mx-auto px-5 md:flex md:px-1 lg:px-8"
+          className="gap-x-14 md:gap-x-6 lg:gap-x-14 items-center max-w-screen-xl 3xl:max-w-screen-2xl mx-auto px-5 md:flex md:px-1 lg:px-8 2xl:px-0 3xl:px-5"
         >
           <Logo
             state={state}
             setState={setState}
             isSmallDevice={isSmallDevice}
+            isExtraLargeDevice={isExtraLargeDevice}
           />
           <div
             className={`flex-1 items-center mt-8 md:mt-0 md:flex ${

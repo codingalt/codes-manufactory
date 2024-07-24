@@ -78,7 +78,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            border: 1px solid #A1AEBF;
+            border: 1px solid #a1aebf;
             border-radius: 10px;
             transition: all 0.2s;
           }
@@ -119,36 +119,36 @@
           transition: all 0.2s;
         }
 
-        &:hover{
+        &:hover {
           border: none;
         }
       }
     }
 
-    // Contact Form 
-    .contactForm{
+    // Contact Form
+    .contactForm {
       width: 100%;
       margin: 4rem auto;
 
-      form{
+      form {
         width: 100%;
 
-        .inputContainer{
+        .inputContainer {
           display: flex;
           align-items: center;
           justify-content: space-between;
           gap: 1rem;
 
-          .input{
+          .input {
             flex: 1;
             width: 100%;
             margin-bottom: 1.7rem;
           }
 
-          input{
+          input {
             width: 100%;
             height: 3.7rem;
-            border: 1px solid #A1AEBF;
+            border: 1px solid #a1aebf;
             border-radius: 10px;
             color: #fff;
             font-size: 18px;
@@ -157,23 +157,23 @@
             padding-left: 1.1rem;
             background-color: transparent;
 
-            &::placeholder{
+            &::placeholder {
               color: rgba($color: #fff, $alpha: 0.5);
               font-size: 16px;
               font-weight: 400;
             }
           }
 
-          .errorSpan{
-            font-size: .8rem;
+          .errorSpan {
+            font-size: 0.8rem;
             color: $error;
             font-weight: 400;
             margin-top: 4px;
           }
         }
 
-        .button{
-          button{
+        .button {
+          button {
             width: 13.5rem;
             height: 3.4rem;
             background-color: #fff;
@@ -182,6 +182,18 @@
             font-size: 18px;
             margin-top: 1rem;
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1366px) {
+    & {
+      .content {
+        margin-top: 4.8rem;
+
+        .title {
+          font-size: 3.2rem;
         }
       }
     }
@@ -207,19 +219,19 @@
           line-height: 45px;
         }
 
-        .technologies{
+        .technologies {
           margin-top: 2.9rem;
           gap: 10px;
 
-          .card{
+          .card {
             padding: 1.5rem 1.2rem;
 
-            .image{
+            .image {
               width: 30px;
               height: 30px;
             }
 
-            h3{
+            h3 {
               font-size: 14px;
               text-align: center;
               line-height: 22px;
@@ -227,23 +239,23 @@
           }
         }
 
-        .contactForm{
+        .contactForm {
           margin: 3rem auto;
           margin-bottom: 6rem;
 
-          form{
-            .inputContainer{
+          form {
+            .inputContainer {
               flex-direction: column;
               justify-content: center;
               align-items: center;
               gap: 0;
             }
 
-            .button{
-              button{
+            .button {
+              button {
                 width: 12.5rem;
                 height: 3.3rem;
-                margin-top: .6rem;
+                margin-top: 0.6rem;
               }
             }
           }

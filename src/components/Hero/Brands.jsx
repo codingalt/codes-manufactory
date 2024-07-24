@@ -10,7 +10,9 @@ import brand4 from "../../assets/brand4.png";
 
 const Brands = () => {
   return (
-    <div className={`${css.brands}`}>
+    <div
+      className={`${css.brands} max-w-screen-xl 3xl:max-w-screen-2xl mx-auto px-4 md:px-9 2xl:px-0 3xl:px-5`}
+    >
       <div className={css.leftSide}>
         <div className={css.images}>
           <img src={profile1} alt="Profile" />

@@ -18,7 +18,7 @@ const Hero = () => {
 
       {/* Content  */}
       <div className={css.content}>
-        <div className="lg:pt-12 2xl:pt-24 max-w-screen-xl mx-auto px-4 md:px-9">
+        <div className="lg:pt-12 2xl:pt-24 max-w-screen-xl 3xl:max-w-screen-2xl mx-auto px-4 md:px-9 2xl:px-0 3xl:px-5">
           <div className={css.inner}>
             <div
               className={css.leftText}

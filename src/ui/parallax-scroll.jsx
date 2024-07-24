@@ -16,7 +16,7 @@ export const ParallaxScroll = ({ images, className }) => {
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  
+
   const total = isSmallDevice ? 2 : 3;
   const third = Math.ceil(images?.length / total);
 
@@ -30,7 +30,7 @@ export const ParallaxScroll = ({ images, className }) => {
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-7xl mx-auto gap-0 md:gap-10 pt-32 pb-40 px-4"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-7xl 3xl:max-w-screen-2xl mx-auto gap-0 md:gap-10 pt-32 pb-40 px-4"
         ref={gridRef}
       >
         <div className="grid gap-10 h-full mb-0 p-0 grid-cols-1 items-start">

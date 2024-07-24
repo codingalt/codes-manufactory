@@ -28,7 +28,7 @@ const ViewProject = () => {
 
         {/* Content  */}
         <div className={css.content}>
-          <div className="lg:pt-16 2xl:pt-24 max-w-screen-xl mx-auto px-4 md:px-8 lg:px-14">
+          <div className="lg:pt-16 2xl:pt-24 max-w-screen-xl 3xl:max-w-screen-2xl mx-auto px-4 md:px-8 lg:px-8 3xl:px-5 3xl:pt-36">
             <div className={css.title} data-aos="fade-up" data-aos-delay="200">
               {project?.title}
             </div>
@@ -80,39 +80,10 @@ const ViewProject = () => {
       </div>
 
       {/* Project Images  */}
-      {/* <ProjectImages /> */}
-      <div className="w-full lg:mt-[7rem] 2xl:mt-[13rem] mb-[10rem] px-4 lg:px-10 2xl:px-0">
+      <div className="w-full lg:mt-[7rem] 2xl:mt-[13rem] 3xl:mt-[5rem] mb-[10rem] px-4 lg:px-10 2xl:px-0">
         <ParallaxScrollDemo images={project} />
       </div>
-      {/* <Projects
-        galleryID="my-test-gallery"
-        images={[
-          {
-            largeURL:
-              "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            thumbnailURL:
-              "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            width: 1875,
-            height: 2500,
-          },
-          {
-            largeURL:
-              "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            thumbnailURL:
-              "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            width: 1669,
-            height: 2500,
-          },
-          {
-            largeURL:
-              "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            thumbnailURL:
-              "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            width: 2500,
-            height: 1666,
-          },
-        ]}
-      /> */}
+     
     </>
   );
 };
