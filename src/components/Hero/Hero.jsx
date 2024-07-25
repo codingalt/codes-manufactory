@@ -10,7 +10,7 @@ const Hero = () => {
     <div className={css.wrapper} data-scroll data-scroll-speed="0.5">
       {/* Background grid  */}
       <div className="absolute h-full w-full min-h-screen bg-[#060606] overflow-hidden">
-        <div className="absolute opacity-[0.55] -z-0 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#1B1B1B_1px,transparent_1px),linear-gradient(to_bottom,#1B1B1B_1px,transparent_1px)] bg-[size:57px_57px]"></div>
+        <div className="absolute opacity-[0.55] -z-0 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#1B1B1B_1px,transparent_1px),linear-gradient(to_bottom,#1B1B1B_1px,transparent_1px)] bg-[size:45px_45px] md:bg-[size:57px_57px]"></div>
       </div>
 
       {/* Background Blurred Shapes */}
@@ -87,7 +87,11 @@ const Hero = () => {
                 data-aos="fade-left"
                 data-aos-delay="950"
                 data-aos-duration="1600"
-                style={{background:"transparent",color:"#fff",gap:"14px"}}
+                style={{
+                  background: "transparent",
+                  color: "#fff",
+                  gap: "14px",
+                }}
               >
                 Let's Chat <FaArrowRight />
               </button>

@@ -43,6 +43,7 @@ const Cards = () => {
         disableButtonsControls
         renderDotsItem={renderDotsItem}
         autoPlay={entry?.isIntersecting}
+        autoPlayStrategy="all"
         autoPlayInterval={isSmallDevice ? 2500 : 3000}
         animationDuration={isSmallDevice ? 500 : 1500}
         infinite

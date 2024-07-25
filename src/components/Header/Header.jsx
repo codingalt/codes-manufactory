@@ -10,9 +10,6 @@ const Header = () => {
   );
   const [pathname, setPathname] = useState(window.location.pathname);
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
-   const isLargeDevice = useMediaQuery(
-     "only screen and (min-width : 993px) and (max-width : 1200px)"
-   );
    const isExtraLargeDevice = useMediaQuery(
      "only screen and (min-width : 1201px) and (max-width : 1580px)"
    );

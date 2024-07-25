@@ -22,9 +22,9 @@ const Cards = () => {
 
   const renderDotsItem = ({ isActive }) => {
     return isActive ? (
-      <div className="w-[40px] h-[6px] transition-all ml-2 bg-[#FB7957] rounded-full cursor-pointer"></div>
+      <div className="w-[30px] h-[6px] transition-all ml-2 bg-[#FB7957] rounded-full cursor-pointer"></div>
     ) : (
-      <div className="w-[20px] h-[6px] transition-all ml-2 bg-white rounded-full cursor-pointer"></div>
+      <div className="w-[15px] h-[6px] transition-all ml-2 bg-white bg-opacity-85 rounded-full cursor-pointer"></div>
     );
   };
 
@@ -36,7 +36,8 @@ const Cards = () => {
         disableButtonsControls
         renderDotsItem={renderDotsItem}
         autoPlay={entry?.isIntersecting}
-        autoPlayInterval={isSmallDevice ? 4000 : 4000}
+        autoPlayStrategy="all"
+        autoPlayInterval={isSmallDevice ? 3000 : 3000}
         animationDuration={isSmallDevice ? 500 : 1500}
         infinite
       >
@@ -68,7 +69,14 @@ const Cards = () => {
               </div>
               <div className={css.line}></div>
               <div className={css.user}>
-                <img src={item.profile} loading="lazy" alt="" />
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black bg-opacity-35">
+                  <img
+                    className="w-[61%] object-cover"
+                    src={item.profile}
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
                 <div className={css.name}>
                   <p>{item.name}</p>
                   <span>{item.position}</span>
