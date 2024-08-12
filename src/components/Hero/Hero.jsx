@@ -73,16 +73,11 @@ const Hero = () => {
                 data-aos-delay="950"
                 data-aos-duration="1600"
               >
-                Get Started
+                Get a Quote
               </button>
             </Link>
 
-            <Link
-              to="#contact"
-              smooth
-              onClick={() => handleSetActive("#contact")}
-              className="bg-transparent"
-            >
+            <Link to="https://wa.me/923067111557" target="_blank" className="bg-transparent">
               <button
                 data-aos="fade-left"
                 data-aos-delay="950"

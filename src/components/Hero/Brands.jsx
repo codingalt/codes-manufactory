@@ -18,14 +18,14 @@ const Brands = () => {
     >
       <div className={css.leftSide}>
         {/* <div className={css.images}>  */}
-          <AvatarGroup isBordered size={isSmallDevice ? "sm" : "md"}>
-            <Avatar src={profile1} />
-            <Avatar src={profile2} />
-            <Avatar src={profile3} />
-          </AvatarGroup>
+        <AvatarGroup isBordered size={isSmallDevice ? "sm" : "md"}>
+          <Avatar src={profile1} />
+          <Avatar src={profile2} />
+          <Avatar src={profile3} />
+        </AvatarGroup>
         {/* </div>  */}
         <p className="text-tiny md:text-sm w-64 font-light">
-          Join over 30+ happy customers and book a demo today.
+          Join over 30+ satisfied clients and elevate your business.
         </p>
       </div>
       <div className={`${css.rightSide} scrollbar-hide`}>

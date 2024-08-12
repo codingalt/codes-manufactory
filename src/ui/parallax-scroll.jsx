@@ -4,80 +4,87 @@ import { motion } from "framer-motion";
 import { cn } from "../utils/cn";
 import { Image } from "@nextui-org/react";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import "./grid.scss";
 
 export const ParallaxScroll = ({ images, className }) => {
   const gridRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    // container: gridRef, // remove this if your container is not fixed height
-    // offset: ["start start", "end start"], // remove this if your container is not fixed height
-  });
+  const { scrollYProgress } = useScroll({});
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
-  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -400]);
+  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 500]);
+  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -400]);
 
-  const total = isSmallDevice ? 2 : 3;
-  const third = Math.ceil(images?.length / total);
-
-  const firstPart = images?.slice(0, third);
-  const secondPart = images?.slice(third, 2 * third);
-  const thirdPart = images?.slice(2 * third);
+  // Distribute images into three columns for larger screens
+  const columns = [[], [], []];
+  images?.forEach((image, index) => {
+    columns[index % 3].push(image);
+  });
 
   return (
     <div
-      className={cn("items-start scrollbar-hide scroll-smooth", className)}
+      className={cn("scrollbar-hide items-start w-full", className)}
       ref={gridRef}
     >
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-7xl 3xl:max-w-screen-2xl mx-auto gap-0 md:gap-10 pt-32 pb-40 px-4"
-        ref={gridRef}
-      >
-        <div className="grid gap-10 h-full mb-0 p-0 grid-cols-1 items-start">
-          {firstPart?.map((el, idx) => (
-            <motion.div
-              style={{ y: translateFirst }} // Apply the translateY motion value here
-              key={"grid-1" + idx}
-            >
-              <Image
-                src={el}
-                className="h-full w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
-        </div>
-        <div className="grid gap-10 h-full mb-0 p-0 grid-cols-1 items-start">
-          {secondPart?.map((el, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
-              <Image
-                src={el}
-                className="h-1/2 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
-        </div>
-        <div className="grid gap-10 h-full mb-0 p-0 grid-cols-1 items-start">
-          {thirdPart?.map((el, idx) => (
-            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
-              <Image
-                src={el}
-                className="h-1/2 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                height="400"
-                width="400"
-                alt="thumbnail"
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
-        </div>
+      <div className="max-w-7xl mx-auto pt-40 pb-0 sm:pb-[36rem] px-9 sm:px-10">
+        {isSmallDevice ? (
+          // Mobile layout: Stack all images in a single column
+          <div className="grid gap-10 sm:gap-12">
+            {images?.map((el, idx) => (
+              <motion.div
+                style={{ y: translateFirst }}
+                key={"grid-mobile-" + idx}
+              >
+                <Image
+                  src={el}
+                  className="h-auto shadow w-full object-cover object-left-top rounded-lg gap-0"
+                  height="100%"
+                  alt="thumbnail"
+                />
+              </motion.div>
+            ))}
+          </div>
+        ) : (
+          // Desktop layout: Display images in three columns
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-12">
+            <div className="grid gap-10 sm:gap-12">
+              {columns[0]?.map((el, idx) => (
+                <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
+                  <Image
+                    src={el}
+                    className="h-auto shadow w-full object-cover object-left-top rounded-lg gap-0"
+                    height="100%"
+                    alt="thumbnail"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            <div className="grid gap-10 sm:gap-12">
+              {columns[1]?.map((el, idx) => (
+                <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+                  <Image
+                    src={el}
+                    className="h-auto shadow w-full object-cover object-left-top rounded-lg gap-0"
+                    height="100%"
+                    alt="thumbnail"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            <div className="grid gap-10 sm:gap-12">
+              {columns[2]?.map((el, idx) => (
+                <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+                  <Image
+                    src={el}
+                    className="h-auto shadow w-full object-cover object-left-top rounded-lg gap-0"
+                    height="100%"
+                    alt="thumbnail"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

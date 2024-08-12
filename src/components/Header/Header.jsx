@@ -10,9 +10,9 @@ const Header = () => {
   );
   const [pathname, setPathname] = useState(window.location.pathname);
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
-   const isExtraLargeDevice = useMediaQuery(
-     "only screen and (min-width : 1201px) and (max-width : 1580px)"
-   );
+  const isExtraLargeDevice = useMediaQuery(
+    "only screen and (min-width : 1201px) and (max-width : 1580px)"
+  );
 
   const navigation = [
     {
@@ -23,7 +23,7 @@ const Header = () => {
           : "#",
     },
     { title: "Services", path: "#services" },
-    { title: "Pricing", path: "#pricing" },
+    // { title: "Pricing", path: "#pricing" },
     { title: "About", path: "#about" },
   ];
 
@@ -111,10 +111,9 @@ const Header = () => {
               })}
               <li>
                 <Link
-                  to="#contact"
-                  smooth
-                  onClick={() => handleSetActive("#contact")}
+                  to="https://wa.me/923067111557"
                   className="flex items-center justify-center gap-x-1 py-3 px-4 h-[40px] mx-auto mt-10 md:mt-0 lg:h-[38px] w-[85%] md:w-[150px] lg:w-[138px] 2xl:w-[141px] 2xl:h-[44px] text-white border font-medium bg-transparent duration-150 md:inline-flex transition-all hover:bg-white hover:text-default-800"
+                  target="_blank"
                 >
                   Contact Now
                 </Link>

@@ -1,11 +1,10 @@
 import React from "react";
 import css from "./Footer.module.scss";
 import { Logo } from "../Header/Logo";
-import youtube from "../../assets/youtube.png"
-import facebook from "../../assets/facebook.png"
-import instagram from "../../assets/instagram.png"
-import twitter from "../../assets/twitter.png";
-import linkedin from "../../assets/linkedin.png";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -37,16 +36,29 @@ const Footer = () => {
           <form>
             <h6
               style={{ color: "#fff !important" }}
-              className="footer-title text-white uppercase"
+              className="footer-title text-white uppercase text-center"
             >
               Follow us on
             </h6>
-            <div className="flex space-x-5 mb-10">
-              <img className="cursor-pointer" loading="lazy" src={youtube} alt="" />
-              <img className="cursor-pointer" loading="lazy" src={facebook} alt="" />
-              <img className="cursor-pointer" loading="lazy" src={instagram} alt="" />
-              <img className="cursor-pointer" loading="lazy" src={twitter} alt="" />
-              <img className="cursor-pointer" loading="lazy" src={linkedin} alt="" />
+            <div className="flex space-x-5 mb-10 text-2xl">
+              <Link
+                to={`https://www.facebook.com/profile.php?id=61563334036624&_rdc=1&_rdr`}
+                target="_blank"
+              >
+                <FaFacebook className="text-white cursor-pointer" />
+              </Link>
+              <Link
+                to={`https://www.instagram.com/laborsoftech/?igsh=MXNodXk0anozMjh0eA%3D%3D`}
+                target="_blank"
+              >
+                <FaInstagram className="text-white cursor-pointer" />
+              </Link>
+              <Link
+                to={`https://www.linkedin.com/company/labors-of-tech/`}
+                target="_blank"
+              >
+                <FaLinkedin className="text-white cursor-pointer" />
+              </Link>
             </div>
             <div className="max-w-sm flex items-center border bg-white rounded-xl p-1">
               <input

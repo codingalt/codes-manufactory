@@ -15,12 +15,14 @@ export const Logo = ({
     <div
       className={`transition-all flex items-center justify-between pt-2 pb-2 md:pt-4 md:pb-2 md:block`}
     >
-      <Link to="/" className="dark">
+      <Link to="/" className="dark max-h-16">
         <Image
           src={logo}
           width={isSmallDevice ? 189 : isExtraLargeDevice ? 270 : size?.width >= 1920 ? 350 : 290}
+          height={"100%"}
           alt="Labors of Tech logo"
           className="dark"
+          // isLoading 
         />
       </Link>
       {!hideMenu && (

@@ -15,7 +15,7 @@ const IndexPage = () => {
       <QuoteSection />
       <OurServices />
       <Testimonial />
-      <Pricing />
+      {/* <Pricing /> */}
       <FAQ />
     </>
   );

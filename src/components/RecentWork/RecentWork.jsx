@@ -2,6 +2,7 @@ import React from "react";
 import css from "./RecentWork.module.scss";
 import { FaArrowRight } from "react-icons/fa6";
 import Projects from "./Projects";
+import { HashLink as Link } from "react-router-hash-link";
 
 const RecentWork = () => {
   return (
@@ -17,9 +18,11 @@ const RecentWork = () => {
             <p>Projects</p>
           </div>
           <div className={css.right}>
-            <button>
-              Get Started <FaArrowRight />
-            </button>
+            <Link to={"#contact"} smooth>
+              <button>
+                Get Started <FaArrowRight />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

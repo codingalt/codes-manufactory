@@ -4,8 +4,7 @@ import ProblemSolutionSection from "./ProblemSolutionSection";
 import ProjectImages from "./ProjectImages";
 import Projects from "./Projects";
 import { useParams } from "react-router-dom";
-// import { projectsData } from "../../utils/projectsData";
-import projectsData from "../../utils/projectsData.json";
+import { projectsData } from "../../utils/projectsData";
 import { ParallaxScrollDemo } from "./ParallaxScrollDemo";
 
 const ViewProject = () => {
@@ -80,7 +79,7 @@ const ViewProject = () => {
       </div>
 
       {/* Project Images  */}
-      <div className="w-full lg:mt-[7rem] 2xl:mt-[13rem] 3xl:mt-[5rem] mb-[10rem] px-4 lg:px-10 2xl:px-0">
+      <div className="w-full lg:mt-[7rem] 2xl:mt-[13rem] 3xl:mt-[5rem] mb-[0rem] sm:mb-[10rem] px-4 lg:px-10 2xl:px-0">
         <ParallaxScrollDemo images={project} />
       </div>
      

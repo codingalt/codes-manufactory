@@ -15,7 +15,7 @@ const ProblemSolutionSection = ({ problem, content }) => {
               marginLeft: "auto",
             }
       }
-      className={`${css.problem} max-w-screen-md`}
+      className={`${css.problem} max-w-screen-lg sm:pr-12`}
       data-aos={problem && "fade-up"}
       data-aos-delay="500"
       data-aos-duration="600"

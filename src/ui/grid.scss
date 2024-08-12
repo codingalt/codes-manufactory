@@ -1,0 +1,46 @@
+.project-grid .image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+//   gap: 12px;
+// }
+
+.project-grid .image-container img {
+    border-radius: 12px;
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.imagesGridWrap {
+    width: 100%;
+    max-width: 1240px; 
+    margin: 0 auto;
+}
+
+.project-grid {
+    width: 100%;
+    padding: 0 25px;
+}
+
+.project-grid .image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0px; 
+  }
+}
+
+

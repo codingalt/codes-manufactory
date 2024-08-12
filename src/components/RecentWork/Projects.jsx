@@ -3,11 +3,12 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { useNavigate } from "react-router-dom";
 import css from "./RecentWork.module.scss";
-import projectsData from "../../utils/projectsData.json";
+import { projectsData } from "../../utils/projectsData";
 import { truncateText } from "../../utils/helpers";
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
 import { useIntersectionObserver, useMediaQuery } from "@uidotdev/usehooks";
+import { Image } from "@nextui-org/react";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -36,14 +37,14 @@ const Projects = () => {
           isEven ? css.carouselCenterItem : ""
         }`}
       >
-        <div className={css.image}>
-          <img src={item.image} loading="lazy" alt={item.title} />
+        <div className={`${css.image} ${isEven ? "" : "dark"}`}>
+          <Image src={item.image} loading="lazy" alt={item.title} />
         </div>
         <div className={css.title}>
           <p>{item.title}</p>
           {isEven && (
             <span>
-              {truncateText(item.description, isSmallDevice ? 34 : 115)}
+              {truncateText(item.description, isSmallDevice ? 34 : 110)}
             </span>
           )}
         </div>
@@ -83,11 +84,11 @@ const Projects = () => {
     >
       <AliceCarousel
         mouseTracking
-        infinite
+        // infinite
         autoPlay={entry?.isIntersecting}
         autoPlayStrategy="all"
         autoPlayInterval={isSmallDevice ? 4000 : 3000}
-        animationDuration={isSmallDevice ? 500 : 3000}
+        animationDuration={isSmallDevice ? 400 : 1500}
         items={items}
         activeIndex={activeIndex}
         responsive={responsive}
