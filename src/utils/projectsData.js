@@ -1,5 +1,3 @@
-import p1 from "../assets/Projects/p1.png";
-import p2 from "../assets/Projects/p2.png";
 
 export const projectsData = [
   {
@@ -8,6 +6,8 @@ export const projectsData = [
     description: `The UK Immigration Portal provides a comprehensive digital solution to streamline the visa application process. The platform allows clients to sign up, submit their visa applications in phases, and track their progress through a user-friendly interface. Admins can review, approve, or reject applications at each phase, ensuring a controlled and efficient workflow. The portal also supports group clients (companies) to register and offer visa-related services, facilitating seamless collaboration between clients and service providers. This approach enhances transparency, reduces processing time, and simplifies the management of visa applications.`,
     image:
       "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723441525/Labors%20of%20Tech/Uk%20Immigration/UK_immigration_Banner_dqqqmq.png",
+    arrow:
+      "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723463440/Labors%20of%20Tech/Uk%20Immigration/Arrow_1_qb3zw1.svg",
     client: "Markus Market",
     industry: "Immigration",
     role: "Design & Development",
@@ -55,11 +55,13 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "SellMyPM - Marketplace",
+    title: "SellMyPM",
     description:
       "SellMyPM is a marketplace connecting PMs looking to buy listing contracts or entire businesses with those looking to sell. It also provides help and support to PMs looking to sell with the selling process.",
     image:
       "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723441482/Labors%20of%20Tech/SellMyPM/Sell_My_PM_Banner_ux6nob.png",
+    arrow:
+      "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723463096/Labors%20of%20Tech/SellMyPM/Arrow_f6iixk.svg",
     client: "Humphrey",
     industry: "Marketplace Platform",
     role: "Design & Development",
@@ -103,6 +105,8 @@ export const projectsData = [
     description: "",
     image:
       "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723442739/Labors%20of%20Tech/Flonest%20App/Flonest_Banner_xqpxdp.png",
+    arrow:
+      "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723463440/Labors%20of%20Tech/Uk%20Immigration/Arrow_1_qb3zw1.svg",
     client: "Hatkela",
     industry: "Matrimony",
     role: "Design & Development",
@@ -148,9 +152,12 @@ export const projectsData = [
   {
     id: 4,
     title: "Vinedo App",
-    description: "",
+    description:
+      "Vinedo is a platform for creators to upload their exclusive content. Users can subscribe to their profiles to get access to their content. Whether you are a model, an influencer or some other personality, you can sell your content.",
     image:
       "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723450845/Labors%20of%20Tech/Vinedo/Vinedo_Banner_e9hxcd.png",
+    arrow:
+      "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723464014/Labors%20of%20Tech/Vinedo/Arrow_d1dik8.svg",
     client: "Taimoor",
     industry: "Matrimony",
     role: "Design & Development",
@@ -181,6 +188,8 @@ export const projectsData = [
     description: `Zawaj is a muslim memorial site where you can find your mahram and spend your rest of the lives with him / her`,
     image:
       "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723441571/Labors%20of%20Tech/Zawajdk/Banner_c2qjln.png",
+    arrow:
+      "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723463854/Labors%20of%20Tech/Zawajdk/Arrow_eckkmd.svg",
     client: "Zawajdk",
     industry: "Matrimony",
     role: "Design & Development",
@@ -212,9 +221,12 @@ export const projectsData = [
   {
     id: 6,
     title: "Muyassar",
-    description: "",
+    description:
+      "Muyaser is a platform for handyman services. Experts from different departments can register themselves to Muyaser, and customers from any part of the region can get their services.",
     image:
       "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723450342/Labors%20of%20Tech/Muyasar/Muyaser_Banner_azzdjv.png",
+    arrow:
+      "https://res.cloudinary.com/dncjtzg2i/image/upload/v1723463922/Labors%20of%20Tech/Muyasar/Arrow_wwmdb6.svg",
     client: "Bajian",
     industry: "Matrimony",
     role: "Design & Development",

@@ -41,7 +41,12 @@ const Projects = () => {
           <Image src={item.image} loading="lazy" alt={item.title} />
         </div>
         <div className={css.title}>
-          <p>{item.title}</p>
+          <div className="w-full flex justify-between items-center">
+            <p>{item.title}</p>
+            <div className="w-16 sm:w-20 mb-2 pr-2">
+            <img src={item.arrow} alt="" className="w-full" />
+            </div>
+          </div>
           {isEven && (
             <span>
               {truncateText(item.description, isSmallDevice ? 34 : 110)}
@@ -86,7 +91,7 @@ const Projects = () => {
         mouseTracking
         // infinite
         autoPlay={entry?.isIntersecting}
-        autoPlayStrategy="all"
+        autoPlayStrategy="action"
         autoPlayInterval={isSmallDevice ? 4000 : 3000}
         animationDuration={isSmallDevice ? 400 : 1500}
         items={items}
